@@ -11,7 +11,7 @@ class Item < ApplicationRecord
     x = 10
     a = nil
     if name.present?
-        "Full message: Item name is #{name} " + "  and id is " +  id
+        "Full message: Item name is #{name} " + "  and id is " +  id.to_s
     else
       "Full Message:   Item name is empty. "
     end

@@ -14,5 +14,12 @@ RSpec.describe Item, type: :model do
         expect(item.message).to eq "Item name is iPhone"
       end
     end
+
+    describe "#full_message" do
+      it "returns a full_message" do
+        item = Item.create(name: 'iPhone')
+        expect(item.full_message).to eq "Full message: Item name is iPhone   and id is " +  item.id.to_s
+      end
+    end
   end
 end
